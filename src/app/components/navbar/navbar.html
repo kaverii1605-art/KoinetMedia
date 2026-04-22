@@ -1,38 +1,81 @@
-<nav class="navbar navbar-expand-lg fixed-top navbar-custom bg-white"
+<nav class="navbar navbar-expand-lg fixed-top navbar-custom"
      [class.scrolled]="isScrolled">
   <div class="container">
 
-    <a class="navbar-brand fw-bold text-uppercase" routerLink="/">
-      <img src="assets/images/knm.png" width="120" alt="Koinet Media">
+    <!-- Logo -->
+    <a class="navbar-brand d-flex align-items-center gap-2" routerLink="/">
+  <img src="assets/images/knm.png" alt="Koinet Media" class="brand-logo" style="height: 52px; width: auto; display: block;">
+      <!-- <span class="brand-text">Koinet<span>Media</span></span> -->
     </a>
 
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+    <!-- Mobile Toggle -->
+    <button class="navbar-toggler custom-toggler" type="button"
+            data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
 
+    <!-- Links -->
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ms-auto align-items-lg-center">
 
         <li class="nav-item">
-          <a class="nav-link" routerLink="/">Home</a>
+          <a class="nav-link" routerLink="/homecomponent" routerLinkActive="active-link">Home</a>
         </li>
 
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        <li class="nav-item dropdown hover-dropdown">
+          <a class="nav-link dropdown-toggle" href="#" (click)="$event.preventDefault()">
             What We Do
           </a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Expertise & Services</a></li>
-            <li><a class="dropdown-item" href="#">Account-Based Marketing</a></li>
+          <ul class="dropdown-menu custom-dropdown">
+           
+          
+                        <li><a class="dropdown-item" href="whatwedo.html"><span class="drop-icon">🎯</span>Expertise & Services</a></li>
+
+            <li><a class="dropdown-item" href="what_we_provide/account-based-marketing.html"><span class="drop-icon">🏢</span>Account-Based Marketing</a></li>
+            <li><a class="dropdown-item" href="what_we_provide/multi-channel-lead.html"><span class="drop-icon">📡</span>Multi-Channel Lead</a></li>
+            <li><a class="dropdown-item" href="what_we_provide/contact_discovery.html"><span class="drop-icon">📢</span>Content Syndication</a></li>
+            <li><a class="dropdown-item" href="what_we_provide/emailmarketing.html"><span class="drop-icon">📧</span>Email Marketing</a></li>
+            <li><a class="dropdown-item" href="what_we_provide/dataappend.html"><span class="drop-icon">🔄</span>Data Append & Cleansing</a></li>
+            <li><a class="dropdown-item" href="what_we_provide/demandgeneration.html"><span class="drop-icon">📈</span>Demand Generation</a></li>
+            <li><a class="dropdown-item" href="what_we_provide/appoinmentgeneration.html"><span class="drop-icon">📅</span>Appointment Generation</a></li>
+            <li><a class="dropdown-item" href="what_we_provide/accountprofiling.html"><span class="drop-icon">🔍</span>Account Profiling</a></li>
           </ul>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" href="#">Contact</a>
+          <a class="nav-link" href="focus_sectors.html">Focus Audiences</a>
+        </li>
+
+        <li class="nav-item dropdown hover-dropdown">
+          <a class="nav-link dropdown-toggle" href="#" (click)="$event.preventDefault()">
+            Resources
+          </a>
+          <ul class="dropdown-menu custom-dropdown">
+            <li><a class="dropdown-item" href="blog.html"><span class="drop-icon">✍️</span>Blog</a></li>
+            <li><a class="dropdown-item" target="_blank" href="https://thetechgossip.com/resources/"><span class="drop-icon">📦</span>Repository</a></li>
+            <li><a class="dropdown-item" href="infographics.html"><span class="drop-icon">🖼️</span>Infographics</a></li>
+            <li><a class="dropdown-item" href="articals.html"><span class="drop-icon">📰</span>Articles</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item dropdown hover-dropdown">
+          <a class="nav-link dropdown-toggle" href="#" (click)="$event.preventDefault()">
+            About Us
+          </a>
+          <ul class="dropdown-menu custom-dropdown">
+            <li><a class="dropdown-item" href="aboutus/overview.html"><span class="drop-icon">🌐</span>Overview</a></li>
+            <li><a class="dropdown-item" href="aboutus/ourstory.html"><span class="drop-icon">📖</span>Our Story</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item ms-lg-3 mt-3 mt-lg-0">
+          <a class="btn contact-btn" href="contact.html">
+            Contact Us <i class="fa-solid fa-arrow-up-right contact-icon"></i>
+          </a>
         </li>
 
       </ul>
     </div>
-
   </div>
 </nav>

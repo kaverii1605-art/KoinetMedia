@@ -11,8 +11,10 @@ export class Navbar {
 
   isScrolled = false;
 
-  @HostListener('window:scroll')
-  onScroll() {
+  ngOnInit(): void {}
+
+  @HostListener('window:scroll', [])
+  onWindowScroll() {
     this.isScrolled = window.scrollY > 50;
   }
 }

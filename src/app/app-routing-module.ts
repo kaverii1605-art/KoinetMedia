@@ -5,8 +5,9 @@ import { Navbar } from './components/navbar/navbar';
 
 const routes: Routes = [
 
-  {path :'' ,component: Homecomponent},
-  {path:'/navbar', component: Navbar}
+   { path: '', redirectTo: 'homecomponent', pathMatch: 'full' },
+  { path: 'homecomponent', component: Homecomponent },
+  { path: 'navbar', component: Navbar }
 ];
 
 @NgModule({
